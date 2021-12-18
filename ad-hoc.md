@@ -66,6 +66,7 @@ ansible all -i inventory.txt -m shell -a "systemctl status firewalld"
 # Gather custom fact local & remote server
 
 mkdir /etc/ansible/facts.d
+
 vim /etc/ansible/facts.d/script.fact
 
                 #!/bin/bash
