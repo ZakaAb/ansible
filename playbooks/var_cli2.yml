@@ -1,0 +1,10 @@
+---
+- hosts: localhost
+  gather_facts: false
+  tasks:
+    - debug:
+        msg:
+          - ' {{y}}'
+          - ' {{z}}'
+# ansible-playbook var_cli.yml -e "y=5 z=6"
+# ansible_playbok var_cli.yml -e "@another_file.yml"

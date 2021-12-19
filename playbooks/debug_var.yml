@@ -1,0 +1,10 @@
+#!/usr/bin/ansible-playbook
+# chmod +x debug_var.yml && ./debug_var.yml
+- name: debug module
+  hosts: localhost
+  tasks:
+    - name: Printing a var
+      debug:
+        msg:
+          - 'The host name is: {{inventory_hostname}}'
+        var: inventory_hostname

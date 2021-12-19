@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  gather_facts: false
+  become: yes
+  tasks:
+    - yum:
+        name: '{{pkg}}'
+        state: '{{req_state}}'
+# ansible-playbook install_uninstall.yml -e "pkg=nginx req_state=present"

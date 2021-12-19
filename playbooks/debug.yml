@@ -1,0 +1,10 @@
+---
+- name: This is a simple play to understerstand debug module
+  hosts: localhost
+  tasks:
+    - name: Printing a msg with parameter of debug module
+      debug:
+        msg:
+          - 'Welcome to Ansible playbooks'
+          - 'second message'
+      #debug: msg="Welcome to Ansible playbooks"

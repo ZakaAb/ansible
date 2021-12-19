@@ -83,3 +83,11 @@ vim /etc/ansible/facts.d/script.fact
 chmod +x /etc/ansible/facts.d/script.fact
 
 ansible all -i inventory.txt -m setup -a "filter=ansible_local"
+
+# Use raw module into target without Python preinstalled
+
+ansible all -i inventory.txt -m raw -a "uptime"
+
+# check syntax playbook
+
+ansible-playbook debug.yml --syntax-check

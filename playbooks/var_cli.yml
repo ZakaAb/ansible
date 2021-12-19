@@ -1,0 +1,7 @@
+---
+- hosts: localhost
+  gather_facts: false
+  tasks:
+    - debug: var=x
+
+  # ansible-playbook var_cli.yml -e "x=5"
