@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  gather_facts: yes
+  tasks:
+    - name: Installing httpd for RedHat os family
+      yum:
+        name: httpd
+        state: present
+      when: ansible_os_family=="RedHat"

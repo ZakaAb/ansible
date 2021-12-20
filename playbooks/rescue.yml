@@ -1,0 +1,13 @@
+---
+- hosts: localhost
+  gather_facts: false
+  tasks:
+    - block:
+        - command: 'ls /root/test-project/playbooks'
+          register: play
+      rescue:
+        - debug:
+            msg: 'The given path is not a validpath'
+      always:
+        - debug:
+            msg: 'This will always executes'

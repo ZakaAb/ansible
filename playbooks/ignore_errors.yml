@@ -1,0 +1,8 @@
+---
+- hosts: localhost
+  gather_facts: false
+  tasks:
+    - command: 'ls /root/test-project/playbooks'
+      register: play
+      ignore_errors: yes
+    - debug: var=play

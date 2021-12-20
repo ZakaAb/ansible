@@ -1,0 +1,10 @@
+---
+- hosts: localhost
+  tasks:
+    - include_tasks: debug_var_inc.yml
+
+# debug_var_inc.yml
+---
+- name: Printing a var
+  debug:
+    var: inventory_hostname
