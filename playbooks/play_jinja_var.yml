@@ -1,0 +1,20 @@
+---
+- name: template file creation
+  hosts: localhost
+  vars:
+    - name: zaki
+    - age: 28
+    - profession: it
+  tasks:
+    - template:
+        src: input_jinja.js
+        dest: /root/output2.txt
+#
+
+#    Hi, there My name is {{ name }} and I'm {{ age }} and I work in {{ profession }}
+
+#   {% if age > 30 %}
+#    Oh man You are old
+#    {% else %}
+#    It's fine...
+#    {% endif %}

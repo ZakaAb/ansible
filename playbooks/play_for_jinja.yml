@@ -1,0 +1,9 @@
+---
+- name: template file creation
+  hosts: localhost
+  tasks:
+    - template:
+        src: test.js
+        dest: /root/output_jinja.txt
+# cat test.js
+# {{ inventory_localhsot }}
